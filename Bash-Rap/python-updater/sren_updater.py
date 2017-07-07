@@ -22,7 +22,10 @@ ar_inprogress=int(sys.argv[11])
 ar_inprogress_renault=int(sys.argv[12])
 ar_month=int(sys.argv[13])
 fix_version1=int(sys.argv[14])
-fix_version2=int(sys.argv[15])
+if sys.argv[15] != "null":
+    fix_version2=int(sys.argv[15])
+else:
+    fix_version2=int(0)
 created_month=int(sys.argv[16])
 resolved_month=int(sys.argv[17])
 resolved_blocker=int(sys.argv[18])

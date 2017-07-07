@@ -95,6 +95,6 @@ echo '*******************************************'
 echo ' Génération du fichier excel               '
 echo '*******************************************'
 
-python sren_updater.py $1 $local_date $Not_Closed $Not_Closed_Renault $Resolved $Resolved_Renault $In_Progress $In_Progress_Renault $In_Progress_Incidents $In_Progress_Support_Request $AR_in_Progress $AR_Renault_In_Progress $AR_Month $Fix_Version1 $Fix_Version2 $Created_Month $Resolved_Month $Resolved_Blocker $Resolved_Critical $Resolved_Major $Resolved_Minor $year $current_month $output_file
+python python-updater/sren_updater.py $1 $local_date $Not_Closed $Not_Closed_Renault $Resolved $Resolved_Renault $In_Progress $In_Progress_Renault $In_Progress_Incidents $In_Progress_Support_Request $AR_in_Progress $AR_Renault_In_Progress $AR_Month $Fix_Version1 $Fix_Version2 $Created_Month $Resolved_Month $Resolved_Blocker $Resolved_Critical $Resolved_Major $Resolved_Minor $year $current_month $output_file
 
 # Open output file with xdg-open when finish 
