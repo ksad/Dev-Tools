@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Usage
+if [ $# -lt 1 ]; then
+        echo "Usage: $0 OLD_EXPORT_FILE";
+        exit 1;
+fi
+
+# check export_file format
+
 echo '*******************************************'
 echo ' Calcul des statistiques pour SREN monde'
 echo '*******************************************'
