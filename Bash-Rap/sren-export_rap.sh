@@ -9,6 +9,36 @@ fi
 # check export_file format
 
 echo '*******************************************'
+echo ' Welcome to JIRA EKINO                     '
+echo ' '
+read -p "       Username : " username
+unset password
+prompt="       Password : "
+while IFS= read -p "$prompt" -r -s -n 1 char
+do
+    if [[ $char == $'\0' ]]
+    then
+        break
+    fi
+    prompt='*'
+    password+="$char"
+done
+echo ' '
+echo ' '
+
+auth_check="$(curl -s -D- -u "$username":"$password" -X GET -H "Content-Type: application/json" https://jira.ekino.com/rest/api/2/issue/createmeta | grep X-Seraph-LoginReason)"
+auth_check=${auth_check#"X-Seraph-LoginReason: "}
+
+if [[ $auth_check == *"OK"* ]]; then
+	echo " Successfully logged in as "$username
+	echo '*******************************************'
+else
+	echo " Authentification failed !!!"
+	echo '*******************************************'
+	exit
+fi
+
+echo '*******************************************'
 echo ' Calcul des statistiques pour SREN monde'
 echo '*******************************************'
 
