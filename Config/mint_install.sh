@@ -12,13 +12,18 @@ mkdir tmp-config-system
 cd tmp-config-system
 
 # VPN
+echo " --------------------------------------------------"
+echo " ---------------- VPN installation ----------------"
+echo " --------------------------------------------------"
 mkdir vpn
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/DE_Frankfurt
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/ES_Madrid
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/JP_Tokyo
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/DE_Frankfurt
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/ES_Madrid
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/JP_Tokyo
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
+wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
+cp vpn/* /etc/NetworkManager/system-connections/
+echo " --------------------------------------------------\n\n"
 
 # SSH
 mkdir .ssh
@@ -44,7 +49,7 @@ mkdir /media/iso
 # Download fillezilla config
 wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
 
-apt-get install vim git virtualbox shutter deluge gparted guake gthumb dconf-cli
+apt-get install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli
 
 # git configuration
 git config --global core.editor "vim"
