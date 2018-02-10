@@ -4,6 +4,39 @@
 mkdir ~/tmp-config-system
 cd ~/tmp-config-system
 
+# VPN
+mkdir vpn
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/DE_Frankfurt
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/ES_Madrid
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/JP_Tokyo
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
+
+# SSH
+mkdir .ssh
+wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
+wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_kubuntu
+wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_kubuntu.pub
+wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
+wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
+cp -r .ssh ~/.ssh
+chmod 600 ~/.ssh/dell_kubuntu*
+
+#bashrc
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/.bashrc
+cp .bashrc ~/.bashrc
+
+# Cinnamon settings
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/cinnamon_settings
+dconf load /org/cinnamon/ < cinnamon_settings
+
+# Create folder to mount iso images
+mkdir /media/iso
+
+# Download fillezilla config
+wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
+
 apt-get install vim git virtualbox shutter deluge gparted guake gthumb dconf-cli
 
 # git configuration
@@ -51,26 +84,3 @@ sudo chmod a+x FoxitReader*.run
 ./FoxitReader.*.run
 
 
-# SSH
-mkdir .ssh
-wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
-wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_kubuntu
-wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_kubuntu.pub
-wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
-wget .ssh/https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
-cp -r .ssh ~/.ssh
-chmod 600 ~/.ssh/dell_kubuntu*
-
-#bashrc
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/.bashrc
-cp .bashrc ~/.bashrc
-
-# Cinnamon settings
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/cinnamon_settings
-dconf load /org/cinnamon/ < cinnamon_settings
-
-# Create folder to mount iso images
-mkdir /media/iso
-
-# Download fillezilla config
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
