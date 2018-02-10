@@ -1,8 +1,15 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo " ****************************************************************"
+  echo " ********* Please run as root  : sudo ./mint_install.sh *********"
+  echo " ****************************************************************"
+  exit
+fi
+
 # Create a tmp config folder to downlaod config files
-mkdir ~/tmp-config-system
-cd ~/tmp-config-system
+mkdir tmp-config-system
+cd tmp-config-system
 
 # VPN
 mkdir vpn
