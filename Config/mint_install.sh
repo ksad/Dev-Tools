@@ -29,12 +29,11 @@ echo " --------------------------------------------------\n\n"
 
 # SSH
 mkdir .ssh
-wget -P .ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
-wget -P .ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint
-wget -P .ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint.pub
-wget -P .ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
-wget -P .ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
-cp -r .ssh ~/.ssh
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint.pub
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
 chmod 600 ~/.ssh/dell_mint*
 
 #bashrc
