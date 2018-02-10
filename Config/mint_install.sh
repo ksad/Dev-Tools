@@ -22,7 +22,9 @@ wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/
 wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
 wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
 wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
+chmod 600 vpn/*
 cp vpn/* /etc/NetworkManager/system-connections/
+service network-manager restart
 echo " --------------------------------------------------\n\n"
 
 # SSH
