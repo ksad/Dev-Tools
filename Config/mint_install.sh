@@ -37,7 +37,7 @@ wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/s
 chmod 600 ~/.ssh/dell_mint*
 
 #bashrc
-wget -P ~/.bashrc https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/.bashrc
+wget -P ~/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/.bashrc
 
 # Create folder to mount iso images
 mkdir /media/iso
