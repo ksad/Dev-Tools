@@ -54,18 +54,18 @@ git config --global user.email ksad.karim@gmail.com
 
 
 # Mac OS theme
-add-apt-repository ppa:noobslab/macbuntu
+add-apt-repository ppa:noobslab/macbuntu -y
 apt-get update
 apt-get --assume-yes install macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7
 
 
 # Slingscold Launchpad
-add-apt-repository ppa:noobslab/macbuntu
+add-apt-repository ppa:noobslab/macbuntu -y
 apt-get update
 apt-get --assume-yes install slingscold
 
 # Synapse 
-add-apt-repository ppa:synapse-core/ppa
+add-apt-repository ppa:synapse-core/ppa -y
 apt-get update
 apt-get --assume-yes install synapse
 
