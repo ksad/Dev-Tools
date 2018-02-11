@@ -69,6 +69,9 @@ add-apt-repository ppa:synapse-core/ppa -y
 apt-get update
 apt-get --assume-yes install synapse
 
+#Nylas mail
+https://edgehill.nylas.com/download?platform=linux-deb
+
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
 dpkg -i skypeforlinux-64.deb
