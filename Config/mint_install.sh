@@ -55,7 +55,7 @@ apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guak
 # git configuration
 git config --global core.editor "vim"
 git config --global user.name "Karim SAD"
-git config --global user.email ksad.karim@gmail.com
+git config --global user.email "ksad.karim@gmail.com"
 
 
 # Mac OS theme
