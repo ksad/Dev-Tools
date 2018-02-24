@@ -57,13 +57,6 @@ git config --global core.editor "vim"
 git config --global user.name "Karim SAD"
 git config --global user.email "ksad.karim@gmail.com"
 
-
-# Mac OS theme
-add-apt-repository ppa:noobslab/macbuntu -y
-apt-get update
-apt-get --assume-yes install macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7
-
-
 # Slingscold Launchpad
 add-apt-repository ppa:noobslab/macbuntu -y
 apt-get update
@@ -75,7 +68,7 @@ apt-get update
 apt-get --assume-yes install synapse
 
 #Nylas mail
-https://edgehill.nylas.com/download?platform=linux-deb
+xdg-open https://edgehill.nylas.com/download?platform=linux-deb
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
