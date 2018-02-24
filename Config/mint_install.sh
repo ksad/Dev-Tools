@@ -25,16 +25,21 @@ wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/
 chmod 600 vpn/*
 cp vpn/* /etc/NetworkManager/system-connections/
 service network-manager restart
-echo " --------------------------------------------------\n\n"
+echo "Restarting network-manager software ......................................"
 
 # SSH
-mkdir .ssh
+sleep 10
+
+if [ ! -d "~/.ssh" ]; then
+  mkdir ~/.ssh
+fi
+
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint.pub
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
-chmod 600 ~/.ssh/dell_mint*
+chmod 600 ~/.ssh/* && chown ksad ~/.ssh/* && chgrp ksad ~/.ssh/*
 
 #bashrc
 wget -P ~/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/.bashrc
