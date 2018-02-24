@@ -50,7 +50,7 @@ mkdir /media/iso
 # Download fillezilla config
 wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
 
-apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla unetbootin vlc
+apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla unetbootin nemo vlc
 
 # git configuration
 git config --global core.editor "vim"
