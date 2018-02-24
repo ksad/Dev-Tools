@@ -97,7 +97,3 @@ wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.1/en_us
 tar xzvf FoxitReader*.tar.gz
 sudo chmod a+x FoxitReader*.run
 ./FoxitReader.*.run
-
-# Cinnamon settings
-wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/cinnamon_settings
-dconf load /org/cinnamon/ < cinnamon_settings
