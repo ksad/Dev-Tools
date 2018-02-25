@@ -68,7 +68,10 @@ apt-get update
 apt-get --assume-yes install synapse
 
 #Nylas mail
-xdg-open https://edgehill.nylas.com/download?platform=linux-deb
+c https://edgehill.nylas.com/download?platform=linux-deb
+
+# Slack
+xdg-open https://slack.com/intl/fr-fr/downloads/linux
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
