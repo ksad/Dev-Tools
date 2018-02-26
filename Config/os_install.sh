@@ -57,6 +57,12 @@ git config --global core.editor "vim"
 git config --global user.name "Karim SAD"
 git config --global user.email "ksad.karim@gmail.com"
 
+# Kodi
+apt-get install software-properties-common
+add-apt-repository ppa:team-xbmc/ppa
+apt-get update
+apt-get install kodi
+
 # Slingscold Launchpad
 add-apt-repository ppa:noobslab/macbuntu -y
 apt-get update
