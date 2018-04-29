@@ -12,6 +12,9 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+#Start screenfetch
+screenfetch
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -87,20 +90,24 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+eval "`dircolors -b`"         #On active le support des couleurs si ce n'est pas encore fait :)
+alias ls='ls --color=auto'
+
 # some more ls aliases
 alias ll='ls -ltrh --color=auto'
 alias la='ls -la --color=auto'
-alias l='ls -CF --color=auto'
 alias net_folder='cd /run/user/1000/gvfs/smb-share\:server\=media_server\,share\=d/'
-alias dbvis='/opt/DbVisualizer/dbvis &'
 alias huaweiP10ssh='ssh -t p10 "ls -ltrh; bash"'
-alias intellij='./Formation_BigData/Tools/idea-IC/bin/idea.sh &'
+alias shut='sudo shutdown -h $1'
+alias md='cd ~/MY-DATA'
+alias docker='sudo docker'
+alias talend="/opt/Talend_Open_Studio_BD_6.3.1/TOS_BD-linux-gtk-x86_64 &"
 addssh(){
-	   eval $(ssh-agent)
-	   ssh-add ~/.ssh/dell_kubuntu
+        eval $(ssh-agent)
+        ssh-add ~/.ssh/dell_7480
 }
 isomount(){
-		sudo mount -o loop "$1" /media/iso
+        sudo mount -o loop "$1" /media/iso
 }
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -127,5 +134,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 export PS1="\[\e[32m\][\[\e[m\]\[\e[32m\]\A\[\e[m\]\[\e[32m\]]\[\e[m\] \[\e[36m\]\u\[\e[m\]\[\e[36;40m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[m\] \[\e[31m\]\[\e[m\]\[\e[33m\]\\$\[\e[m\] "
+
+#export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64" 
+export PATH=$PATH:$JAVA_HOME/bin  
