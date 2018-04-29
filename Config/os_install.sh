@@ -50,21 +50,28 @@ mkdir /media/iso
 # Download fillezilla config
 wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
 
-apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla unetbootin vlc konsole
+# Installing basic packages
+apt-get update
+apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla vlc konsole
 
 # git configuration
 git config --global core.editor "vim"
 git config --global user.name "Karim SAD"
 git config --global user.email "ksad.karim@gmail.com"
 
+# UnetBootin
+add-apt-repository -y ppa:gezakovacs/ppa
+apt-get update
+apt-get --assume-yes install unetbootin
+
 # Kodi
 apt-get install software-properties-common
-add-apt-repository ppa:team-xbmc/ppa
+add-apt-repository -y ppa:team-xbmc/ppa
 apt-get update
-apt-get install kodi
+apt-get --assume-yes install kodi
 
 # Synapse 
-add-apt-repository ppa:synapse-core/ppa -y
+add-apt-repository -y ppa:synapse-core/ppa
 apt-get update
 apt-get --assume-yes install synapse
 
