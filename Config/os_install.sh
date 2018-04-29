@@ -12,20 +12,20 @@ mkdir tmp-config-system
 cd tmp-config-system
 
 # VPN
-echo " --------------------------------------------------"
-echo " ---------------- VPN installation ----------------"
-echo " --------------------------------------------------"
-mkdir vpn
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/DE_Frankfurt
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/ES_Madrid
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/JP_Tokyo
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
-wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
-chmod 600 vpn/*
-cp vpn/* /etc/NetworkManager/system-connections/
-service network-manager restart
-echo "Restarting network-manager software ......................................"
+#echo " --------------------------------------------------"
+#echo " ---------------- VPN installation ----------------"
+#echo " --------------------------------------------------"
+#mkdir vpn
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/DE_Frankfurt
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/ES_Madrid
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/JP_Tokyo
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/Panama
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/UAE_Dubai
+#wget -P vpn/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/vpn/US_LosAngles
+#chmod 600 vpn/*
+#cp vpn/* /etc/NetworkManager/system-connections/
+#service network-manager restart
+#echo "Restarting network-manager software ......................................"
 
 # SSH
 sleep 10
@@ -50,7 +50,7 @@ mkdir /media/iso
 # Download fillezilla config
 wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/FileZilla.xml
 
-apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla unetbootin nemo vlc
+apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla unetbootin vlc konsole
 
 # git configuration
 git config --global core.editor "vim"
@@ -62,11 +62,6 @@ apt-get install software-properties-common
 add-apt-repository ppa:team-xbmc/ppa
 apt-get update
 apt-get install kodi
-
-# Slingscold Launchpad
-add-apt-repository ppa:noobslab/macbuntu -y
-apt-get update
-apt-get --assume-yes install slingscold
 
 # Synapse 
 add-apt-repository ppa:synapse-core/ppa -y
@@ -99,3 +94,36 @@ wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.1/en_us
 tar xzvf FoxitReader*.tar.gz
 sudo chmod a+x FoxitReader*.run
 ./FoxitReader.*.run
+
+# Sublime Text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+apt-get update
+apt-get --assume-yes install sublime-text
+
+# Atom Editor
+wget https://atom.io/download/deb -o atom-amd64.deb
+dpkg -i atom-amd64.deb
+
+# Boostnote
+wget https://github.com/BoostIO/boost-releases/releases/download/v0.11.4/boostnote_0.11.4_amd64.deb
+dpkg -i boostnote_0.11.4_amd64.deb
+
+# DropBox
+wget https://linux.dropbox.com/packages/ubuntu/dropbox_2015.10.28_amd64.deb
+dpkg -i dropbox_2015.10.28_amd64.deb
+
+# Anydesk
+wget https://download.anydesk.com/linux/anydesk_2.9.5-1_amd64.deb?_ga=2.81004247.1501986712.1525006071-650245743.1525006071 -o anydesk_2.9.5-1_amd64.deb
+dpkg -i anydesk_2.9.5-1_amd64.deb
+
+# Nomachine
+wget http://download.nomachine.com/download/6.1/Linux/nomachine_6.1.6_9_amd64.deb
+dpkg -i nomachine_6.1.6_9_amd64.deb
+
+# Timeshift
+apt-add-repository -y ppa:teejee2008/ppa
+apt-get update
+apt-get install timeshift
+
+
