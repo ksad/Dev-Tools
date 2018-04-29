@@ -1,12 +1,37 @@
 Host *
     ForwardAgent yes
 
+Host freeshell
+    	ForwardAgent yes
+	Hostname war.freeshells.org
+	User fs-enirysfr
+    	#LocalForward 22:war.freeshells.org:22
+	#ForwardX11
+
 Host p10
-	Hostname 192.168.1.13
 	Port 1999
 	User root
 	IdentityFile ~/.ssh/p10_android.key
 	LogLevel=QUIET
+
+Host ambari-server ruben_aws ali_aws karim_aws felix_aws	
+	User ubuntu
+	IdentityFile ~/.ssh/aws
+
+Host vm-master
+	Hostname 192.168.1.27
+	User master
+	IdentityFile ~/.ssh/dell_7480
+
+Host vm-node1
+	Hostname 192.168.1.32
+	User node
+	IdentityFile ~/.ssh/dell_7480
+
+Host vm-node2
+	Hostname 192.168.1.31
+	User node
+	IdentityFile ~/.ssh/dell_7480
 
 Host dacia-dev renault-dev.f6.fr renault-integ dacia-integ web1-dev-helios-ren
     User webadmin
