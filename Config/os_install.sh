@@ -70,21 +70,19 @@ add-apt-repository -y ppa:team-xbmc/ppa
 apt-get update
 apt-get --assume-yes install kodi
 
-# Synapse 
-add-apt-repository -y ppa:synapse-core/ppa
-apt-get update
-apt-get --assume-yes install synapse
-
 #Nylas mail
-xdg-open https://edgehill.nylas.com/download?platform=linux-deb
+wget https://edgehill.s3-us-west-2.amazonaws.com/2.0.32-fec7941/linux-deb/x64/NylasMail.deb
+apt-get --assume-yesinstall gir1.2-gnomekeyring-1.0
+dpkg -i NylasMail.deb
 
 # Slack
-xdg-open https://slack.com/intl/fr-fr/downloads/linux
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.1.1-amd64.deb
+apt-get --assume-yes install libcurl3
+dpkg -i slack-desktop-3.1.1-amd64.deb
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
 dpkg -i skypeforlinux-64.deb
-
 
 # TeamViewer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
@@ -109,7 +107,7 @@ apt-get update
 apt-get --assume-yes install sublime-text
 
 # Atom Editor
-wget https://atom.io/download/deb -o atom-amd64.deb
+wget https://atom.io/download/deb --output-document=atom-amd64.deb
 dpkg -i atom-amd64.deb
 
 # Boostnote
@@ -121,7 +119,8 @@ wget https://linux.dropbox.com/packages/ubuntu/dropbox_2015.10.28_amd64.deb
 dpkg -i dropbox_2015.10.28_amd64.deb
 
 # Anydesk
-wget https://download.anydesk.com/linux/anydesk_2.9.5-1_amd64.deb?_ga=2.81004247.1501986712.1525006071-650245743.1525006071 -o anydesk_2.9.5-1_amd64.deb
+wget https://download.anydesk.com/linux/anydesk_2.9.5-1_amd64.deb?_ga=2.81004247.1501986712.1525006071-650245743.1525006071 --output-document=anydesk_2.9.5-1_amd64.deb
+apt-get install libgtkglext1
 dpkg -i anydesk_2.9.5-1_amd64.deb
 
 # Nomachine
@@ -133,4 +132,7 @@ apt-add-repository -y ppa:teejee2008/ppa
 apt-get update
 apt-get install timeshift
 
-
+# Synapse 
+add-apt-repository -y ppa:synapse-core/ppa
+apt-get update
+apt-get --assume-yes install synapse
