@@ -70,6 +70,10 @@ add-apt-repository -y ppa:team-xbmc/ppa
 apt-get update
 apt-get --assume-yes install kodi
 
+# WhatsApp
+wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=https://www.thefanclub.co.za/sites/default/files/public/downloads/whatsapp-webapp_1.0_all.deb&nid=200
+dpkg -i whatsapp-webapp_1.0_all.deb
+
 #Nylas mail
 wget https://edgehill.s3-us-west-2.amazonaws.com/2.0.32-fec7941/linux-deb/x64/NylasMail.deb
 apt-get --assume-yesinstall gir1.2-gnomekeyring-1.0
