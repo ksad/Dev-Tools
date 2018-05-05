@@ -52,7 +52,7 @@ wget https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/FileZilla/Fi
 
 # Installing basic packages
 apt-get update
-apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla vlc konsole chrome-gnome-shell com.canonical.notify-osd
+apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guake gthumb dconf-cli filezilla vlc konsole chrome-gnome-shell com.canonical.notify-osd hardinfo
 
 # git configuration
 git config --global core.editor "vim"
