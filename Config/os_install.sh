@@ -35,8 +35,9 @@ if [ ! -d "~/.ssh" ]; then
 fi
 
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/config
-wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint
-wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_mint.pub
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_7480
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/dell_7480.pub
+wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/authorized_keys
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/known_hosts
 wget -P ~/.ssh/ https://raw.githubusercontent.com/ksad/Dev-Tools/master/Config/ssh/p10_android.key
 chmod 600 ~/.ssh/* && chown ksad ~/.ssh/* && chgrp ksad ~/.ssh/*
