@@ -96,12 +96,9 @@ alias ls='ls --color=auto'
 # some more ls aliases
 alias ll='ls -ltrh --color=auto'
 alias la='ls -la --color=auto'
-alias net_folder='cd /run/user/1000/gvfs/smb-share\:server\=media_server\,share\=d/'
-alias huaweiP10ssh='ssh -t p10 "ls -ltrh; bash"'
 alias shut='sudo shutdown -h $1'
 alias md='cd ~/MY-DATA'
 alias docker='sudo docker'
-alias talend="/opt/Talend_Open_Studio_BD_6.3.1/TOS_BD-linux-gtk-x86_64 &"
 addssh(){
         eval $(ssh-agent)
         ssh-add ~/.ssh/dell_7480
@@ -135,6 +132,7 @@ if ! shopt -oq posix; then
 fi
 
 export PS1="\[\e[32m\][\[\e[m\]\[\e[32m\]\A\[\e[m\]\[\e[32m\]]\[\e[m\] \[\e[36m\]\u\[\e[m\]\[\e[36;40m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[m\] \[\e[31m\]\[\e[m\]\[\e[33m\]\\$\[\e[m\] "
+# --- export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch) \[\033[00m\]$ "
 
 #export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64" 
 export PATH=$PATH:$JAVA_HOME/bin  
