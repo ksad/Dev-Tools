@@ -59,6 +59,7 @@ apt-get --assume-yes install vim git gitk virtualbox shutter deluge gparted guak
 git config --global core.editor "vim"
 git config --global user.name "Karim SAD"
 git config --global user.email "ksad.karim@gmail.com"
+git config --global alias.lg "log --graph --pretty=format:'%C(033)%h%Creset -%C(yellow)%d%Creset %s (%C(183)%cr%Creset by %C(183)%an%Creset)' --abbrev-commit"
 
 # UnetBootin
 add-apt-repository -y ppa:gezakovacs/ppa
