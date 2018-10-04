@@ -8,13 +8,20 @@ if [ "$EUID" -ne 0 ]
 fi
 
 read -p "Application name : " appsName
+appName=${appsName// /-}
+appName=${appName,,}
 
 read -p "Path to application launcher : " appsLauncher
 
 read -p "Path to application icon : " appsIcon
-appsIcon="$(dirname "${appsIcon}")/$(basename "${appsIcon}")"
+#appsIcon="$(dirname "${appsIcon}")/$(basename "${appsIcon}")"
 newAppsIcon="$(dirname "${appsLauncher}")/$(basename "${appsIcon}")"
-cp $appsIcon $newAppsIcon
+
+if [ ! -f "$newAppsIcon" ]
+then
+	echo "Copying application icon ..."
+	cp $appsIcon $newAppsIcon
+fi
 
 while true; do
 	read -p "Application category : (Tape 'all' to show all categories) " appsCategory
@@ -46,8 +53,8 @@ while true; do
 	esac
 done
 
-echo "creating file desktopi ..."
-cat > $appsName.desktop << EOF
+echo "creating file desktop..."
+cat > $appName.desktop << EOF
 [Desktop Entry]
 Name=$appsName
 Comment=$appsName Desktop
@@ -59,4 +66,4 @@ StartupNotify=true
 Categories=$appsCategory;
 EOF
 
-mv $appsName.desktop /usr/share/applications
+mv "$appName".desktop /usr/share/applications
