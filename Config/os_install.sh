@@ -142,3 +142,8 @@ apt-get install timeshift
 add-apt-repository -y ppa:synapse-core/ppa
 apt-get update
 apt-get --assume-yes install synapse
+
+# Polo file manager
+sudo apt-add-repository -y ppa:teejee2008/ppa
+sudo apt-get update
+sudo apt-get install polo-file-manager
