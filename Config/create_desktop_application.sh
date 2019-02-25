@@ -14,8 +14,8 @@ appName=${appName,,}
 read -p "Path to application launcher : " appsLauncher
 
 read -p "Path to application icon : " appsIcon
-#appsIcon="$(dirname "${appsIcon}")/$(basename "${appsIcon}")"
-newAppsIcon="$(dirname "${appsLauncher}")/$(basename "${appsIcon}")"
+appsIcon="$(dirname "${appsIcon}")/$(basename "${appsIcon}")"
+newAppsIcon="$(dirname "${appsLauncher}")/$(basename "${appsLauncher}").png"
 
 if [ ! -f "$newAppsIcon" ]
 then
