@@ -143,7 +143,5 @@ add-apt-repository -y ppa:synapse-core/ppa
 apt-get update
 apt-get --assume-yes install synapse
 
-# Polo file manager
-sudo apt-add-repository -y ppa:teejee2008/ppa
-sudo apt-get update
-sudo apt-get install polo-file-manager
+# Balena Etcher (boot iso)
+wget https://github.com/balena-io/etcher/releases/download/v1.4.9/balena-etcher-electron-1.4.9-linux-ia32.zip
