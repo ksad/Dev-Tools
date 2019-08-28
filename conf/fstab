@@ -1,0 +1,11 @@
+# /dev/sda1
+UUID=4998ed86-2032-474e-bc08-cbd0296e0cc8	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda5
+UUID=da7eb861-7c7e-463e-b0a1-cffbe0e5c708	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# nas
+//192.168.1.23/Volume_1 /media/nas cifs vers=1.0,credentials=/home/ksad/.smbcredentials 0 0
+
+# node-syrine
+//192.168.1.43/media-public /media/media-server cifs vers=1.0,credentials=/home/ksad/.smbcredentials_media-server 0 0

@@ -1,0 +1,7 @@
+[core]
+	editor = vim
+[user]
+	name = Karim SAD
+	email = ksad.karim@gmail.com
+[alias]
+	lg = log --graph --pretty=format:'%C(033)%h%Creset -%C(yellow)%d%Creset %s (%C(183)%cr%Creset by %C(183)%an%Creset)' --abbrev-commit

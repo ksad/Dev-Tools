@@ -1,0 +1,38 @@
+Host *
+    ForwardAgent yes
+
+Host freeshell
+    	ForwardAgent yes
+	Hostname war.freeshells.org
+	User fs-enirysfr
+    	#LocalForward 22:war.freeshells.org:22
+	#ForwardX11
+
+Host p10
+	Port 1999
+	User root
+	IdentityFile ~/.ssh/p10_android.key
+	LogLevel=QUIET
+
+Host master media-server node-syrine node-elias
+	User ksad
+	IdentityFile ~/.ssh/id_rsa
+
+Host remote-master
+	User ksad
+	Port 1985
+	IdentityFile ~/.ssh/id_rsa
+
+Host remote-node-syrine
+	User ksad
+	Port 1986
+	IdentityFile ~/.ssh/id_rsa
+
+Host remote-node-elias
+	User ksad
+	Port 1987
+	IdentityFile ~/.ssh/id_rsa
+
+Host *.hortoncluster.com
+	User centos
+	IdentityFile ~/.ssh/cluster_horton_centos.pem

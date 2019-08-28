@@ -133,3 +133,30 @@ sudo yum install python-pip
 # Krita image Editor
 wget http://mirrors.dotsrc.org/kde/stable/krita/4.1.7/krita-4.1.7-x86_64.appimage
 wget https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Calligra_Krita_icon.svg/600px-Calligra_Krita_icon.svg.png
+
+# Install Gnome 3 on Mint
+From package manager install :
+- Ubuntu-gnome-desktop
+- Gnome tweak tools
+
+# Install useful packages
+sudo apt-get install chrome-gnome-shell vim gitk virtualbox deluge gparted filezilla vlc hardinfo deepin-screenshot thunar ncdu ansible dateutils
+
+# Install via package manager
+- Kodi
+- Whatsapp
+- Telegram
+- Slack
+- SublimeText
+- Synapse
+- Visual Studio
+- VirtualBox
+
+# Download & Install package
+- Skype
+- Teamviewer
+- Balena
+- Boostnote
+
+# Install monaco font
+https://www.fontpalace.com/font-download/Monaco/
